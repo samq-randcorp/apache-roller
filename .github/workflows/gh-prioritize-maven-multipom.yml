@@ -21,7 +21,7 @@ jobs:
       run: |
         curl -LJO https://github.com/whitesource/unified-agent-distribution/releases/latest/download/wss-unified-agent.jar
         echo UA downloaded successfully
-        WARFILE=$(find ./target -type f -name "*.war")
+        WARFILE=$(find ./ -type f -wholename "*/target/*.war")
         export WS_ENABLEIMPACTANALYSIS=true
         export WS_REQUIREKNOWNSHA1=false
         export WS_RESOLVEALLDEPENDENCIES=false
