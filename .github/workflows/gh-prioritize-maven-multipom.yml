@@ -36,4 +36,5 @@ jobs:
         curl -LJO https://unified-agent.s3.amazonaws.com/xModuleAnalyzer/xModuleAnalyzer-21.2.1.jar
         echo UA downloaded successfully
         java -jar wss-unified-agent.jar -d ./ -analyzeMultiModule multimodule.txt
+        cat multimodule.txt
         java -jar xModuleAnalyzer-21.2.1.jar -xModulePath multimodule.txt -fsaJarPath ./wss-unified-agent.jar -c ./eua.config -aggregateModules true
